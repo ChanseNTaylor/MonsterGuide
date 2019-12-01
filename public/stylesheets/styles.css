@@ -1,0 +1,22 @@
+.wrapper {
+  color: white;
+  padding: 0.5rem;
+  min-height: 100vh;
+  background-color: black; }
+
+.navbar {
+  padding: 0.5rem 0.25rem;
+  border-bottom: 1px solid white; }
+  .navbar__header {
+    flex: 1 1 auto;
+    font-size: 1.5rem; }
+    .navbar__header:visited {
+      color: white; }
+    .navbar__header:hover {
+      color: gray; }
+
+.no-margins {
+  margin: 0; }
+
+.is-flex {
+  display: flex; }
