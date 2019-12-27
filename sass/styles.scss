@@ -1,9 +1,17 @@
 .wrapper
 {
     color: white;
-    padding: 0.5rem;
+    padding: 0.75rem;
     min-height: 100vh;
     background-color: black;
+}
+
+.construction
+{
+    color: black;
+    padding: 0.25rem;
+    text-align: center;
+    background: yellow;
 }
 
 .navbar

@@ -1,10 +1,26 @@
 extends layout
 
+mixin constructionWarning
+  .construction
+    span Attention: This website is currently under construction 
+
 block content
   main
     p Monster Guide
     p last updated:
     p This is tool for browsing monster information for the monsters in the game Dragon Warrior Monsters.  This tool will later be expanded to include the second game Dragon Warrior Monsters 2.
+    .links
+      ul Monster Categories
+        li Slime
+        li Dragon
+        li Beast
+        li Bird
+        li Plant
+        li Bug
+        li Devil
+        li Zombie
+        li Material
+        li Boss
   footer
     p Source code available on 
       a(href="/") GitHub
