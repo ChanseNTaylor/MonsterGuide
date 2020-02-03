@@ -1,0 +1,21 @@
+// Resets
+html, body, h1
+{
+    margin: 0;
+}
+
+// Box-sizing
+html
+{
+    box-sizing: border-box;
+}
+*, *:before, *:after
+{
+    box-sizing: inherit;
+}
+
+// Utility
+.is-flex
+{
+    display: flex;
+}

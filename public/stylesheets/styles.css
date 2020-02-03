@@ -1,8 +1,11 @@
+html {
+  background-color: black; }
+
 .wrapper {
   color: white;
-  padding: 0.75rem;
+  margin: 0 auto;
   min-height: 100vh;
-  background-color: black; }
+  width: 85%; }
 
 .construction {
   color: black;
@@ -10,16 +13,9 @@
   text-align: center;
   background: yellow; }
 
-.navbar {
-  padding: 0.5rem 0.25rem;
-  border-bottom: 1px solid white; }
-  .navbar__header {
-    flex: 1 1 auto;
-    font-size: 1.5rem; }
-    .navbar__header:visited {
-      color: white; }
-    .navbar__header:hover {
-      color: gray; }
+.footer {
+  text-align: center;
+  margin: 0 auto; }
 
 .no-margins {
   margin: 0; }

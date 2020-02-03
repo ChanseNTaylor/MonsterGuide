@@ -1,0 +1,41 @@
+.navbar
+{
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.25rem 0;
+
+    &__header
+    {
+        font-size: 1.75rem;
+        text-decoration: none;
+
+        &:visited
+        {
+            color: white;
+        }
+
+        &:hover
+        {
+            color: gray;
+        }
+    }
+}
+
+.navbar__input
+{
+    border: none;
+    border-radius: 3px 0 0 3px;
+    font-size: 1.125rem;
+    height: 2rem;
+    padding: 0.25rem 0.5rem;
+    vertical-align: bottom;
+}
+
+.navbar__button
+{
+    @extend .navbar__input;
+
+    background-color: green;
+    border-radius: 0 3px 3px 0;
+    color: white;
+}

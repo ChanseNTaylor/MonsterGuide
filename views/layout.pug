@@ -1,16 +1,23 @@
+mixin constructionWarning()
+  .construction
+    span #[b Attention:] This website is currently under construction!
+
 doctype html
-html(lang="en-us").no-margins
+html(lang="en-us")
   head
     meta(charset="utf-8")
     title DWM Monster Guide
-    link(rel='stylesheet', href='/stylesheets/styles.css')
-  body.no-margins
-    +constructionWarning
+    link(rel='stylesheet', href='/stylesheets/main.css')
+  body
     .wrapper
       header
+        +constructionWarning()
         nav.is-flex.navbar
           a.navbar__header(href="/") DWM Monster Guide
           form
-            input(type="text" placeholder="Search")
-            button(type="submit") GO
+            input.navbar__input(type="text" placeholder="Search...")
+            button.navbar__button(type="submit") GO
+        hr
       block content
+
+//- For favicon, use a dragon quest slime! It will be cute!

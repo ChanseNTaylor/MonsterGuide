@@ -1,26 +1,23 @@
 extends layout
 
-mixin constructionWarning
-  .construction
-    span Attention: This website is currently under construction 
-
 block content
-  main
-    p Monster Guide
-    p last updated:
-    p This is tool for browsing monster information for the monsters in the game Dragon Warrior Monsters.  This tool will later be expanded to include the second game Dragon Warrior Monsters 2.
-    .links
-      ul Monster Categories
-        li Slime
-        li Dragon
-        li Beast
-        li Bird
-        li Plant
-        li Bug
-        li Devil
-        li Zombie
-        li Material
-        li Boss
-  footer
+  main.is-flex
+    .content
+      h1 Monster Guide
+      span last updated:
+      p This is tool for browsing monster information for the monsters in the video game series #[a(href="https://dragonquest.fandom.com/wiki/Category:Monsters_series_games") Dragon Warrior Monsters].  This tool covers both the first games and their sequels.
+    .sidebar
+      p.sidebar__header Monster Categories
+      a.sidebar__link(href="/Slime") Slime
+      a.sidebar__link(href="/Dragon") Dragon
+      a.sidebar__link(href="/Beast") Beast
+      a.sidebar__link(href="/Bird") Bird
+      a.sidebar__link(href="/Plant") Plant
+      a.sidebar__link(href="/Bug") Bug
+      a.sidebar__link(href="/Devil") Devil
+      a.sidebar__link(href="/Zombie") Zombie
+      a.sidebar__link(href="/Material") Material
+      a.sidebar__link(href="/Boss") Boss
+  footer.footer
     p Source code available on 
-      a(href="/") GitHub
+      a(href="https://github.com/ChanseNTaylor/MonsterGuide") GitHub
