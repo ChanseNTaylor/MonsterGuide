@@ -1,18 +1,34 @@
-html
+.category
 {
-    background-color: black;
-}
-
-.wrapper
-{
-    color: white;
-    margin: 0 auto;
-    min-height: 100vh;
-    width: 85%;
-}
-
-.footer
-{
+    border: 5px double white;
+    border-radius: 4px;
+    margin: 2rem auto;
+    padding: 0 1rem;
     text-align: center;
-    margin: 0 auto;
+    width: 60%;
+
+    &__link
+    {
+        border-radius: 2px;
+        display: inline-block;
+        margin: 0.25rem;
+        padding: 0.5rem;
+
+        &:hover
+        {
+            background-color: gray;
+        }
+    }
+}
+
+.link
+{
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover
+    {
+        color: $link-color--hover;
+        text-decoration: underline;
+    }
 }

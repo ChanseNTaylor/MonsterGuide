@@ -1,23 +1,31 @@
 extends layout
 
 block content
-  main.is-flex
-    .content
-      h1 Monster Guide
-      span last updated:
-      p This is tool for browsing monster information for the monsters in the video game series #[a(href="https://dragonquest.fandom.com/wiki/Category:Monsters_series_games") Dragon Warrior Monsters].  This tool covers both the first games and their sequels.
-    .sidebar
-      p.sidebar__header Monster Categories
-      a.sidebar__link(href="/Slime") Slime
-      a.sidebar__link(href="/Dragon") Dragon
-      a.sidebar__link(href="/Beast") Beast
-      a.sidebar__link(href="/Bird") Bird
-      a.sidebar__link(href="/Plant") Plant
-      a.sidebar__link(href="/Bug") Bug
-      a.sidebar__link(href="/Devil") Devil
-      a.sidebar__link(href="/Zombie") Zombie
-      a.sidebar__link(href="/Material") Material
-      a.sidebar__link(href="/Boss") Boss
-  footer.footer
-    p Source code available on 
-      a(href="https://github.com/ChanseNTaylor/MonsterGuide") GitHub
+  main
+    h1 Monster Guide
+    p This is tool for browsing monster information for the various monsters found in the #[a.link(href="https://dragonquest.fandom.com/wiki/Category:Monsters_series_games") Dragon Warrior Monsters] video game series.
+    .category
+      h3.category__header Monster Families
+      hr.category__rule
+      a.category__link(href="/Slime")
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Dragon")
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Beast")
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Bird")
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Plant")
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Bug")
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Devil") 
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Zombie")
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Material")
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Water")
+        img(src="https://via.placeholder.com/35")
+      a.category__link(href="/Boss")
+        img(src="https://via.placeholder.com/35")

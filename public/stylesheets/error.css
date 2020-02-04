@@ -54,24 +54,6 @@ html {
   text-align: center;
   margin: 0 auto; }
 
-.category {
-  border: 5px double white;
-  border-radius: 4px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  text-align: center;
-  width: 60%; }
-  .category__link {
-    border-radius: 2px;
-    display: inline-block;
-    margin: 0.25rem;
-    padding: 0.5rem; }
-    .category__link:hover {
-      background-color: gray; }
-
-.link {
-  color: #b17cff;
-  text-decoration: none; }
-  .link:hover {
-    color: #cfafff;
-    text-decoration: underline; }
+.main__error {
+  overflow: auto;
+  white-space: pre; }

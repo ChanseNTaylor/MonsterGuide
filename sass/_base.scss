@@ -1,21 +1,30 @@
+// Variables
+$submit-button-color: #47c447;
+$submit-button-color--hover: lighten($submit-button-color, 10%);
+$submit-button-color--press: darken($submit-button-color, 10%);
+
+$link-color: #b17cff;
+$link-color--hover: lighten($link-color, 10%);
+
 // Resets
 html, body, h1
 {
     margin: 0;
 }
 
-// Box-sizing
+// General
 html
 {
+    background-color: black;
     box-sizing: border-box;
 }
 *, *:before, *:after
 {
     box-sizing: inherit;
 }
-
-// Utility
-.is-flex
+.wrapper
 {
-    display: flex;
+    color: white;
+    margin: 0 auto;
+    width: 85%;
 }

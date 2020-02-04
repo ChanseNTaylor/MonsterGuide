@@ -1,6 +1,10 @@
 extends layout
 
+block title
+  title #{error.status} - #{message}
+  link(rel='stylesheet', href='/stylesheets/error.css')
+  
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  main.main
+    h1 #{error.status} - #{message}
+    pre.main__error #{error.stack}
