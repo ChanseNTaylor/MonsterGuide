@@ -64,10 +64,14 @@ html {
   .category__link {
     border-radius: 2px;
     display: inline-block;
+    height: 3rem;
     margin: 0.25rem;
-    padding: 0.5rem; }
+    padding: 0.5rem;
+    width: 3rem; }
     .category__link:hover {
       background-color: gray; }
+  .category__image {
+    width: 100%; }
 
 .link {
   color: #b17cff;

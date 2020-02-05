@@ -2,6 +2,10 @@ mixin constructionWarning()
   .construction
     span #[b Attention:] This website is currently under construction!
 
+mixin monsterFamily(text)
+  a.category__link(href="/" + text)
+    img.category__image(src="images/" + text + "family.png" alt=text + "icon.")
+
 doctype html
 html(lang="en-us")
   head

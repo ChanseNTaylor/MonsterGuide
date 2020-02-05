@@ -11,13 +11,21 @@
     {
         border-radius: 2px;
         display: inline-block;
+        height: 3rem;
         margin: 0.25rem;
         padding: 0.5rem;
+        width: 3rem;
+
 
         &:hover
         {
             background-color: gray;
         }
+    }
+
+    &__image
+    {
+        width: 100%;
     }
 }
 
