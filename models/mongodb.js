@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 
-const URL = 'mongodb://142.93.63.104:27017';
+const URL = 'mongodb://monsterMaster:CakeGun@142.93.63.104:27017/monsters';
 
 mongoose.connect(URL, { useNewUrlParser: true }, (err, client) =>
 {
     if (!err)
     {
-        console.log('Successfully Established Connection with MongoDB');
+        console.log('Established Connection with MongoDB');
     }
     else
     {
-        console.log(`Failed to Establish Connection with MongoDB with Error: ${err}`);
+        console.log(`Failed to connect to MongoDB with Error: ${err}`);
     }
 });
 

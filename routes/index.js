@@ -10,12 +10,10 @@ const monsters = mongoose.model('Monsters');
 
 router.get('/', (req, res) =>
 {
-    res.render("index");
-    /* monsters.find({ family: "Slime" }, (err, docs) =>
+    monsters.find({ family: "Slime" }, (err, docs) =>
     {
         if(!err) { res.render("index", { title: docs }); }
     });
-    */
 });
 
 module.exports = router;
