@@ -1,6 +1,7 @@
+"use strict";
 const mongoose = require('mongoose');
 
-//Attributes of the Course object
+// Attributes of the Course object
 const monstersSchema = new mongoose.Schema(
 {
     name: {
