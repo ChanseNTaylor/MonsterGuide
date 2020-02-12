@@ -11,8 +11,6 @@ const monsters = mongoose.model('Monsters');
 
 router.get('/', (req, res, err) =>
 {
-    if(err) console.log(err);
-
     res.render("index");
 
     /*monsters.find({ family: "Slime" }, (err, docs) =>
@@ -20,5 +18,19 @@ router.get('/', (req, res, err) =>
         if(!err) { res.render("index", { title: docs }); }
     });*/
 });
+
+router.get("/:family", (req, res, next) =>
+{
+    const familyArr = ["slime", "dragon", "beast", "bird", "plant", "bug", "devil", "zombie", "material", "water", "boss"];
+
+    if(familyArr.includes(req.params.family))
+    {
+        res.render("family", { family: req.params.family });
+    }
+    
+    next()
+});
+
+// router.get("/:monster", (req, res, err) => {});
 
 module.exports = router;
