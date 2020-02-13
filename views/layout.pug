@@ -6,6 +6,22 @@ mixin monsterFamily(text)
   a.category__link(href="/" + text)
     img.category__image(src="images/" + text + "family.png" alt=text + "icon.")
 
+mixin monsterCategories()
+  .category
+      h3.category__header Monster Families
+      hr.category__rule
+      +monsterFamily("slime")
+      +monsterFamily("dragon")
+      +monsterFamily("beast")
+      +monsterFamily("bird")
+      +monsterFamily("plant")
+      +monsterFamily("bug")
+      +monsterFamily("devil")
+      +monsterFamily("zombie")
+      +monsterFamily("material")
+      +monsterFamily("water")
+      +monsterFamily("boss")
+
 doctype html
 html(lang="en-us")
   head

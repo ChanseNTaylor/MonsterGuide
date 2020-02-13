@@ -9,15 +9,7 @@ const router = express.Router();
 // Link
 const monsters = mongoose.model('Monsters');
 
-router.get('/', (req, res, err) =>
-{
-    res.render("index");
-
-    /*monsters.find({ family: "Slime" }, (err, docs) =>
-    {
-        if(!err) { res.render("index", { title: docs }); }
-    });*/
-});
+router.get('/', (req, res, err) => { res.render("index"); });
 
 router.get("/:family", (req, res, next) =>
 {
@@ -25,10 +17,17 @@ router.get("/:family", (req, res, next) =>
 
     if(familyArr.includes(req.params.family))
     {
-        res.render("family", { family: req.params.family });
+        monsters.find({ family: "Slime" }, (err, docs) =>
+        {
+            const familyStr = `${req.params.family[0].toUpperCase()}${req.params.family.substring(1)}`;
+
+            res.render("family", { family: familyStr, docs: docs });
+        });
     }
-    
-    next()
+    else
+    {
+        next();
+    }
 });
 
 // router.get("/:monster", (req, res, err) => {});

@@ -1,19 +1,19 @@
 extends layout
 
+block title
+  title #{family} Family
+  link(rel='stylesheet', href='/stylesheets/family.css')
+
 block content
   main
+    +monsterCategories()
     h1 #{family} Family
-    .category
-      h3.category__header Monster Families
-      hr.category__rule
-      +monsterFamily("slime")
-      +monsterFamily("dragon")
-      +monsterFamily("beast")
-      +monsterFamily("bird")
-      +monsterFamily("plant")
-      +monsterFamily("bug")
-      +monsterFamily("devil")
-      +monsterFamily("zombie")
-      +monsterFamily("material")
-      +monsterFamily("water")
-      +monsterFamily("boss")
+    p This is the #{family.toUpperCase()} family of monsters. They are the soft boys!
+    .resultsDiv
+      each monster in docs
+        .resultsDiv__result
+          img.resultsDiv__icon(src="https://via.placeholder.com/50" alt=monster.name + " icon.")
+          if monster.DWM2_Only
+            a.resultsDiv__link(href="/") #{monster.name}*
+          else
+            a.resultsDiv__link(href="/") #{monster.name}

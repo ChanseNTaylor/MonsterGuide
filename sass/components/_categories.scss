@@ -1,0 +1,29 @@
+.category
+{
+    border: 5px double white;
+    border-radius: 4px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    text-align: center;
+    width: 60%;
+
+    &__link
+    {
+        border-radius: 2px;
+        display: inline-block;
+        height: 3rem;
+        margin: 0.25rem;
+        padding: 0.5rem;
+        width: 3rem;
+
+        &:hover
+        {
+            background-color: gray;
+        }
+    }
+
+    &__image
+    {
+        width: 100%;
+    }
+}

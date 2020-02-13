@@ -12,6 +12,10 @@ const monstersSchema = new mongoose.Schema(
         type: String,
         required: 'This field is required!'
     },
+    DWM2_Only: {
+        type: Boolean,
+        required: 'This field is required!'
+    }
 });
 
 mongoose.model('Monsters', monstersSchema);

@@ -1,0 +1,30 @@
+.resultsDiv__result
+{
+    background-color: gray;
+    border-radius: 0.15rem;
+    margin-bottom: 0.5rem;
+    padding: 0.15rem;
+
+    &:hover
+    {
+        background-color: darkgray;
+    }
+}
+
+.resultsDiv__icon
+{
+    vertical-align: middle;
+}
+
+.resultsDiv__link
+{
+    color: white;
+    font-weight: bold;
+    padding: 0 0.5rem;
+    text-decoration: none;
+
+    &:hover
+    {
+        text-decoration: underline;
+    }
+}

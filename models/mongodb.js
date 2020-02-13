@@ -8,11 +8,11 @@ mongoose.connect(URL, OPTIONS, err =>
 {
     if (!err)
     {
-        console.log('Established Connection with MongoDB');
+        console.log('Established Connection with MongoDB.');
     }
     else
     {
-        console.log(`Failed to connect to MongoDB with Error: ${err}`);
+        console.log(`Failed to connect to MongoDB with Error: ${err}.`);
     }
 });
 

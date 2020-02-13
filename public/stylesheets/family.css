@@ -73,9 +73,21 @@ html {
   text-align: center;
   margin: 0 auto; }
 
-.link {
-  color: #b17cff;
+.resultsDiv__result {
+  background-color: gray;
+  border-radius: 0.15rem;
+  margin-bottom: 0.5rem;
+  padding: 0.15rem; }
+  .resultsDiv__result:hover {
+    background-color: darkgray; }
+
+.resultsDiv__icon {
+  vertical-align: middle; }
+
+.resultsDiv__link {
+  color: white;
+  font-weight: bold;
+  padding: 0 0.5rem;
   text-decoration: none; }
-  .link:hover {
-    color: #cfafff;
+  .resultsDiv__link:hover {
     text-decoration: underline; }
