@@ -13,15 +13,14 @@ router.get('/', (req, res, err) => { res.render("index"); });
 
 router.get("/:family", (req, res, next) =>
 {
-    const familyArr = ["slime", "dragon", "beast", "bird", "plant", "bug", "devil", "zombie", "material", "water", "boss"];
+    const capital = `${req.params.family[0].toUpperCase()}${req.params.family.substring(1)}`
+    const familyArr = ["slime", "dragon", "beast", "bird", "plant", "bug", "devil", "zombie", "material", "water", "bosse"];
 
     if(familyArr.includes(req.params.family))
     {
-        monsters.find({ family: "Slime" }, (err, docs) =>
+        monsters.find({ family: capital }, (err, docs) =>
         {
-            const familyStr = `${req.params.family[0].toUpperCase()}${req.params.family.substring(1)}`;
-
-            res.render("family", { family: familyStr, docs: docs });
+            res.render("family", { family: capital, docs: docs });
         });
     }
     else
@@ -30,6 +29,9 @@ router.get("/:family", (req, res, next) =>
     }
 });
 
-// router.get("/:monster", (req, res, err) => {});
+router.get("/monster/:monster", (req, res, err) => 
+{
+    
+});
 
 module.exports = router;

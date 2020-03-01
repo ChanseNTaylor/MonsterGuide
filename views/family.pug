@@ -1,19 +1,35 @@
 extends layout
 
+mixin resultLink(monsterName, DWM2_Only)
+  a.resultsDiv__link(href="/monsters/" + monsterName) #{monsterName}
+  if(DWM2_Only)
+    span *
+
 block title
   title #{family} Family
   link(rel='stylesheet', href='/stylesheets/family.css')
+  script(src="/javascripts/family.js")
 
 block content
   main
     +monsterCategories()
     h1 #{family} Family
-    p This is the #{family.toUpperCase()} family of monsters. They are the soft boys!
+    p This is the #{family.toUpperCase()} family of monsters. 
+    p Note: The * near the monsters name means that they are exclusive to the second game in the series.
+    .controlsDiv
+      .filterControl
+        button.filter__all--disabled(disabled) DWM2
+        button.filter__DWM1 DWM 1
+      .viewControl
+        button.view__list--disabled(disabled) List view
+        button.view__grid Grid view
+    .sortDiv
+      span Name
+        img(src="https://via.placeholder.com/20")
+      span Game
+        img(src="https://via.placeholder.com/20")
     .resultsDiv
       each monster in docs
         .resultsDiv__result
           img.resultsDiv__icon(src="https://via.placeholder.com/50" alt=monster.name + " icon.")
-          if monster.DWM2_Only
-            a.resultsDiv__link(href="/") #{monster.name}*
-          else
-            a.resultsDiv__link(href="/") #{monster.name}
+          +resultLink(monster.name, monster.DWM2_Only)
